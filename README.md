@@ -6,6 +6,13 @@ TrustLedger is a full-stack machine learning application that analyzes financial
 
 The platform combines a **Random Forest machine learning model**, **FastAPI backend**, **SQLite database**, and **React dashboard** into a complete end-to-end fraud detection system.
 
+# TrustLedger — Financial Fraud Detection & Risk Analysis Platform
+
+**Live Demo:** https://trust-ledger-b3k2.vercel.app
+
+**Backend API:** https://trust-ledger-ivory.vercel.app
+
+
 ---
 ## 🖥️ Dashboard Preview
 
