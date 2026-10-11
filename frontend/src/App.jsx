@@ -22,15 +22,19 @@ setSelected(data[0]);
 console.error("Could not load samples:", error);
 }
 };
+
 const loadTransactions = async () => {
-try {
-const response = await fetch(`${API_URL}/transactions`);
-const data = await response.json();
-setTransactions(data);
-} catch (error) {
-console.error("Could not load transactions:", error);
-}
+  try {
+    const saved = JSON.parse(
+      localStorage.getItem("trustledger_transactions") || "[]"
+    );
+    setTransactions(saved);
+  } catch (error) {
+    console.error("Could not load transactions:", error);
+    setTransactions([]);
+  }
 };
+
 const loadStats = async () => {
 try {
 const response = await fetch(`${API_URL}/stats`);
@@ -127,10 +131,31 @@ Amount: selected.Amount
 })
 });
 const data = await response.json();
+
 setResult(data);
-await loadTransactions();
+
+const transaction = {
+  id: Date.now(),
+  amount: Number(selected.Amount),
+  fraud_probability: data.fraud_probability,
+  trust_score: data.trust_score,
+  risk_level: data.risk_level,
+};
+
+const saved = JSON.parse(
+  localStorage.getItem("trustledger_transactions") || "[]"
+);
+
+const updated = [transaction, ...saved];
+localStorage.setItem(
+  "trustledger_transactions",
+  JSON.stringify(updated)
+);
+setTransactions(updated);
+
 await loadStats();
 await loadAnalytics();
+
 } catch (error) {
   console.error("Fraud analysis failed:", error);
   alert("Could not connect to TrustLedger API. Check the browser console.");
