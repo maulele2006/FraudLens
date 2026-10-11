@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://trust-ledger-ivory.vercel.app";
 function App() {
 const [samples, setSamples] = useState([]);
 const [selected, setSelected] = useState(null);
