@@ -13,25 +13,25 @@ The platform combines a **Random Forest machine learning model**, **FastAPI back
 
 
 ---
-## 🖥️ Dashboard Preview
+##  Dashboard Preview
 
 ![TrustLedger Dashboard](docs/dashboard.png)
-## 🚀 Key Features
+##  Key Features
 
-- 🔍 **Fraud Detection** — Predict whether a transaction is potentially fraudulent
-- 📊 **Fraud Probability** — Display the model's estimated probability of fraud
-- 🛡️ **Risk Assessment** — Convert predictions into Low, Medium, and High risk levels
-- 📈 **Model Performance** — View Accuracy, Precision, Recall, F1-Score, and ROC-AUC
-- ⚖️ **Model Comparison** — Compare Random Forest with Logistic Regression
-- 🔬 **Feature Importance** — Identify the features contributing most to predictions
-- 📊 **Transaction Analytics** — View fraud/normal distribution and confusion matrix
-- 🗄️ **Transaction History** — Store analyzed transactions using SQLite
-- ⚡ **REST API** — FastAPI endpoints connecting the ML model with the frontend
-- 💻 **Interactive Dashboard** — React-based interface for analyzing transactions
+-  **Fraud Detection** — Predict whether a transaction is potentially fraudulent
+-  **Fraud Probability** — Display the model's estimated probability of fraud
+-  **Risk Assessment** — Convert predictions into Low, Medium, and High risk levels
+-  **Model Performance** — View Accuracy, Precision, Recall, F1-Score, and ROC-AUC
+-  **Model Comparison** — Compare Random Forest with Logistic Regression
+-  **Feature Importance** — Identify the features contributing most to predictions
+-  **Transaction Analytics** — View fraud/normal distribution and confusion matrix
+-  **Transaction History** — Store analyzed transactions using SQLite
+-  **REST API** — FastAPI endpoints connecting the ML model with the frontend
+-  **Interactive Dashboard** — React-based interface for analyzing transactions
 
 ---
 
-## 🖥️ Dashboard
+##  Dashboard
 
 TrustLedger provides an interactive dashboard for monitoring fraud detection performance and analyzing individual transactions.
 
@@ -49,7 +49,7 @@ The dashboard includes:
 
 ---
 
-## 🧠 Machine Learning
+##  Machine Learning
 
 TrustLedger uses a **Random Forest Classifier** trained on the Credit Card Fraud Detection dataset.
 
