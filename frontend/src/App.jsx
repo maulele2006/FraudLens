@@ -26,7 +26,7 @@ console.error("Could not load samples:", error);
 const loadTransactions = async () => {
   try {
     const saved = JSON.parse(
-      localStorage.getItem("trustledger_transactions") || "[]"
+      localStorage.getItem("FraudLens_transactions") || "[]"
     );
     setTransactions(saved);
   } catch (error) {
@@ -143,12 +143,12 @@ const transaction = {
 };
 
 const saved = JSON.parse(
-  localStorage.getItem("trustledger_transactions") || "[]"
+  localStorage.getItem("FraudLens_transactions") || "[]"
 );
 
 const updated = [transaction, ...saved];
 localStorage.setItem(
-  "trustledger_transactions",
+  "FraudLens_transactions",
   JSON.stringify(updated)
 );
 setTransactions(updated);
@@ -158,7 +158,7 @@ await loadAnalytics();
 
 } catch (error) {
   console.error("Fraud analysis failed:", error);
-  alert("Could not connect to TrustLedger API. Check the browser console.");
+  alert("Could not connect to FraudLens API. Check the browser console.");
 } finally {
   setLoading(false);
 }
@@ -173,7 +173,7 @@ return (
 <div className="app">
 <header className="hero">
 <div className="hero-badge">AI FRAUD DETECTION PLATFORM</div>
-<h1>TrustLedger</h1>
+<h1>FraudLens</h1>
 <p>Intelligent transaction monitoring and risk assessment powered by machine learning.</p>
 <div className="hero-status"><span className="status-dot"></span>System Online</div>
 </header>
@@ -310,7 +310,7 @@ return (
 </div>
 )}
 </section>
-<footer><p>TrustLedger • AI-Powered Financial Fraud Detection</p></footer>
+<footer><p>FraudLens • AI-Powered Financial Fraud Detection</p></footer>
 </div>
 );
 }
