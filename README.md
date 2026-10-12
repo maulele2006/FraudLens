@@ -8,9 +8,9 @@ The project combines a Random Forest classifier, Python, FastAPI, React, and SQL
 
 - **Live Dashboard:** https://trust-ledger-b3k2.vercel.app
 - **Backend API:** https://trust-ledger-ivory.vercel.app
-- **GitHub Repository:** https://github.com/maulele2006/TrustLedger
+- **GitHub Repository:** https://github.com/maulele2006/FraudLens
 
-> The application is deployed under its original TrustLedger URL. The project branding has been updated to FraudLens.
+> The application is deployed under its original FraudLens URL. The project branding has been updated to FraudLens.
 
 ## 🖥️ Dashboard Preview
 
@@ -238,8 +238,8 @@ The structure above summarizes the main project components. Additional configura
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/maulele2006/TrustLedger.git
-cd TrustLedger
+git clone https://github.com/maulele2006/FraudLens.git
+cd FraudLens
 ```
 
 ### 2. Set up the Python environment
